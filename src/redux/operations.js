@@ -1,12 +1,12 @@
 import * as api from "../api/api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-export const fetchContacts = createAsyncThunk(
-  "contacts/fetchContacts",
+export const fetcContacts = createAsyncThunk(
+  "contacts/fetcContacts",
   async () => {
     try {
-      const contactsFromDb = await api.fetchContacts();
-      return contactsFromDb;
+      const contactsFromDB = await api.fetcContacts();
+      return contactsFromDB;
     } catch (error) {
       return error;
     }
@@ -17,8 +17,8 @@ export const postContacts = createAsyncThunk(
   "contacts/postContacts",
   async (newContact) => {
     try {
-      const contactsFromDb = await api.postContacts(newContact);
-      return contactsFromDb;
+      const contactsFromDB = await api.postContacts(newContact);
+      return contactsFromDB;
     } catch (error) {
       return error;
     }

@@ -3,11 +3,11 @@ import s from "./SearchContact.module.css";
 import { useDispatch } from "react-redux";
 import { filter } from "../../redux/slices/filter";
 
-export default function SearchContact() {
+export default function Filter() {
   const dispatch = useDispatch();
   return (
     <div>
-      <title className={s.title}>Find contacts by name</title>
+      <p className={s.title}>Find contacts by name</p>
       <label>
         <input
           type="text"

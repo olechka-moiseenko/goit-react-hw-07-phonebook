@@ -9,22 +9,22 @@ const contactsSlice = createSlice({
     error: null,
   },
   extraReducers: {
-    [operations.fetchContacts.fulfilled](state, action) {
+    [operations.fetcContacts.fulfilled](state, action) {
       return {
         ...state,
-        entities: [...state.entities, action.payload],
+        entities: [...state.entities, ...action.payload],
         status: null,
         error: null,
       };
     },
-    [operations.fetchContacts.pending](state, action) {
+    [operations.fetcContacts.pending](state, action) {
       return {
         ...state,
         status: "Loading",
         error: null,
       };
     },
-    [operations.fetchContacts.rejected](state, action) {
+    [operations.fetcContacts.rejected](state, action) {
       return {
         ...state,
         status: null,

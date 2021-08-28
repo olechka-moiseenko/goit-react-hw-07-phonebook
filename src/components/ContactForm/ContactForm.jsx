@@ -9,7 +9,7 @@ export default function ContactForm() {
   const dispatch = useDispatch();
   const allContacts = useSelector(getContacts);
 
-  const handleAddContact = (evt) => {
+  const handleSubmit = (evt) => {
     evt.preventDefault();
     if (
       allContacts.some(
@@ -32,24 +32,22 @@ export default function ContactForm() {
   const nameInputId = uuidv4();
 
   return (
-    <form onSubmit={handleAddContact} className={s.form}>
-      <label className={s.label}>
-        <p>Name</p>
+    <form onSubmit={handleSubmit} className={s.form}>
+      <span>Name</span>
+      <label className={s.formItem}>
         <input
-          className={s.input}
           autoComplete="off"
-          name="inputName"
           type="text"
+          name="inputName"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
           id={nameInputId}
         />
       </label>
-      <label className={s.label}>
-        <p>Number</p>
+      <span className={s.number}>Number</span>
+      <label className={s.formItem}>
         <input
-          className={s.input}
           autoComplete="off"
           type="tel"
           name="inputNumber"

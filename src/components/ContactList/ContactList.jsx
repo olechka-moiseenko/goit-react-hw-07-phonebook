@@ -6,7 +6,7 @@ import * as operations from "../../redux/operations";
 
 export default function ContactList() {
   const dispatch = useDispatch();
-  useEffect(() => dispatch(operations.fetchContacts()), [dispatch]);
+  useEffect(() => dispatch(operations.fetcContacts()), [dispatch]);
   const filteredContactList = useSelector(filteredSelector);
 
   return (

@@ -11,7 +11,7 @@ export default function App() {
     <div className={s.container}>
       <h1 className={s.title}>Phonebook</h1>
       <ContactForm />
-      {allContacts.length > 0 && <h2 className={s.titile}>Contacts</h2>}
+      {allContacts.length > 0 && <h2 className={s.title}>Contacts</h2>}
       {allContacts.length > 0 && <SearchContact />}
       <ContactList />
     </div>
