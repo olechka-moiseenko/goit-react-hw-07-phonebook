@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import ContactForm from "./components/ContactForm/ContactForm";
+import SearchContact from "./components/SearchContact/SearchContact";
+import ContactList from "./components/ContactList/ContactList";
+import s from "./App.module.css";
+import { useSelector } from "react-redux";
+import { getContacts } from "./redux/selectors";
 
-function App() {
+export default function App() {
+  const allContacts = useSelector(getContacts);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={s.container}>
+      <h1 className={s.title}>Phonebook</h1>
+      <ContactForm />
+      {allContacts.length > 0 && <h2 className={s.titile}>Contacts</h2>}
+      {allContacts.length > 0 && <SearchContact />}
+      <ContactList />
     </div>
   );
 }
-
-export default App;
