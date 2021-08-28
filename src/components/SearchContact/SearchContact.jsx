@@ -3,7 +3,7 @@ import s from "./SearchContact.module.css";
 import { useDispatch } from "react-redux";
 import { filter } from "../../redux/slices/filter";
 
-export default function Filter() {
+export default function SearchContact() {
   const dispatch = useDispatch();
   return (
     <div>

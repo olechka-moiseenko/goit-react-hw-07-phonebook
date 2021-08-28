@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "name": "wrtwrtwe",
+      "number": "1343412",
+      "id": 1
+    },
+    {
+      "name": "olga",
+      "number": "67777",
+      "id": 2
+    },
+    {
+      "name": "leo",
+      "number": "888777",
+      "id": 3
+    }
+  ]
+}

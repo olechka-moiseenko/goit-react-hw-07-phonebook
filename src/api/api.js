@@ -8,7 +8,7 @@ export async function fetcContacts() {
 }
 
 export async function postContacts(newContact) {
-  const response = await axios.post(`/contacts, (newContact)`);
+  const response = await axios.post("/contacts", newContact);
   return response.data;
 }
 

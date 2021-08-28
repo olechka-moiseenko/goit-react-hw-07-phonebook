@@ -26,7 +26,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "prepare": "husky install",
-    "start-server": "json-server --watch db.json"
+    "server": "json-server --port 3001 --watch db.json "
   },
   "eslintConfig": {
     "extends": [
